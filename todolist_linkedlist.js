@@ -8,29 +8,29 @@ class Node{
 }
 
 class linkedlist{
-    let head=null;
+    
     constructor(){
-        
+        this.head=null
     }
     
     
     addfirst(value){
         const newnode =new Node(value);
-        if(head==null){
-            head=newnode;
+        if(this.head==null){
+            this.head=newnode;
         }else{
-            const hold=head;
-            head=newnode
-            head.next=hold;
+            const hold=this.head;
+            this.head=newnode
+            this.head.next=hold;
         }
     }
     
     addlast(value){
         const newnode=new Node(value)
-        if(head==null){
-            head=newnode;
+        if(this.head==null){
+            this.head=newnode;
         }else{
-            const temp=head;
+            const temp=this.head;
            while(temp.next!=null){
                temp=temp.next;
            } 
@@ -41,10 +41,10 @@ class linkedlist{
     
     addindex(value,index){
         const newnode=new Node(value)
-        if(head==null){head=newnode}
+        if(this.head==null){head=newnode}
         else{
             let a=1;
-            const temp=head
+            const temp=this.head
             while(a<index){
                 temp=temp.next
                 a++
@@ -57,10 +57,10 @@ class linkedlist{
     
     removeindex(index){
     
-        if(head==null){return head}
+        if(this.head==null){return this.head}
         else{
             let a=1;
-            const temp=head
+            const temp=this.head
             while(a<index){
                 temp=temp.next
                 a++
@@ -74,9 +74,9 @@ class linkedlist{
     }
     
     removevalue(value){
-        if(head==null){return null}
+        if(this.head==null){return null}
         else{
-            const temp=head
+            const temp=this.head
             while(temp.next.value!=value){
                 temp=temp.next
             }
