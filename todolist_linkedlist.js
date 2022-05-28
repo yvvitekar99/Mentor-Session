@@ -30,7 +30,7 @@ class linkedlist{
         if(this.head==null){
             this.head=newnode;
         }else{
-            const temp=this.head;
+            let temp=this.head;
            while(temp.next!=null){
                temp=temp.next;
            } 
@@ -60,7 +60,7 @@ class linkedlist{
         if(this.head==null){return this.head}
         else{
             let a=1;
-            const temp=this.head
+            let temp=this.head
             while(a<index){
                 temp=temp.next
                 a++
@@ -85,11 +85,24 @@ class linkedlist{
         }
     }
     
+    print(){
+        let temp=this.head
+        while(temp!=null){
+            console.log(temp.value)
+            temp=temp.next
+        }
+    }
+    
     
 }
 
 
 let todolist =new linkedlist
 
+
 todolist.addfirst(55)
-console.log(todolist)
+todolist.addlast(554)
+todolist.addlast(54)
+todolist.addfirst(75)
+todolist.removeindex(2)
+todolist.print()
