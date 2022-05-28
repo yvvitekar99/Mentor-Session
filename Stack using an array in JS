@@ -1,0 +1,40 @@
+let arr=[];
+
+//prompt("Enter 1 for push2 for pop and 3 for peek");
+(function(){
+  let value=
+  window.prompt
+  ("Enter 1 for push 2 for pop and 3 for peek");
+  if(value==1){
+    let pushValue=window.prompt("Enter push value");
+    push(pushValue);
+    console.log(arr);
+  }
+  else if(value==2){
+      pop();
+      console.log(arr);
+  }
+  else if(value==3){
+      console.log(peek());
+  }
+  else{
+      window.prompt("Wrong Value");
+  }
+})();
+
+function push(value){
+    arr.push(value);
+}
+function pop(){
+    if(arr.length==0)
+    console.log("array is empty");
+    
+    const poppedValue= arr.pop();
+    return poppedValue;
+}
+function peek(){
+    if(arr.length==0)
+    console.log("array is empty");
+    
+    return arr[arr.length-1];
+}
