@@ -1,0 +1,40 @@
+let arr=[];
+
+
+(function(){
+  let value=
+  window.prompt
+  ("Enter 1 for queue 2 for deque and 3 for peek");
+  if(value==1){
+    let pushValue=window.prompt("Enter push value");
+    queue(pushValue);
+    console.log(arr);
+  }
+  else if(value==2){
+      deque();
+      console.log(arr);
+  }
+  else if(value==3){
+      console.log(peek());
+  }
+  else{
+      window.prompt("Wrong Value");
+  }
+})();
+
+function queue(value){
+    arr.push(value);
+}
+function deque(){
+    if(arr.length==0)
+    console.log("array is empty");
+    
+    const poppedValue= arr.shift();
+    return poppedValue;
+}
+function peek(){
+    if(arr.length==0)
+    console.log("array is empty");
+    
+    return arr[0];
+}
